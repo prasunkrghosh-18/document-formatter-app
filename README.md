@@ -1,16 +1,57 @@
-# React + Vite
+# Document Formatter & Exporter Web Application 📝✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, high-performance web application designed to automatically format user-provided text into professional templates, enhance content using AI, and export seamlessly to PDF and DOCX formats. 
 
-Currently, two official plugins are available:
+This project was built as part of a competitive hackathon/problem statement to leverage Google technologies, specifically Google AI (Gemini) and Google Cloud (Firebase).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- **Predefined Templates:** Instantly format plain text into structured templates like Resumes, Business Letters, and Project Reports.
+- **AI Content Enhancement:** Powered by Google's state-of-the-art **Gemini 3.5 Flash**, users can automatically rewrite, expand, or professionally enhance their input text with a single click.
+- **Real-Time Live Preview:** See your document dynamically update as you type or change templates using a beautifully crafted split-pane interface.
+- **Multi-Format Exporting:** Download your finalized documents perfectly formatted in either **PDF** or **DOCX** formats.
+- **Premium UI/UX:** Built with a glassmorphism design system, dark mode, smooth micro-animations, and modern typography.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
 
-## Expanding the Oxlint configuration
+- **Frontend Core:** React.js, Vite
+- **Styling:** Vanilla CSS (Modern CSS variables, Flexbox/Grid, Glassmorphism)
+- **AI Integration:** `@google/genai` (Gemini 3.5 Flash)
+- **Exporting Libraries:** `html2pdf.js` (for PDF), `docx` (for Word documents)
+- **Deployment:** Google Cloud / Firebase Hosting
+- **IDE:** Google Antigravity (Next-generation agentic IDE)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🌐 Live Demo
+
+The application is deployed on Firebase Hosting and can be accessed here:
+**[https://practice-ccfef.web.app](https://practice-ccfef.web.app)**
+
+## 💻 Local Setup Instructions
+
+If you want to run this project locally on your machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/prasunkrghosh-18/document-formatter-app.git
+   cd document-formatter-app
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up Environment Variables:**
+   Create a `.env` file in the root directory and add your Google AI Gemini API Key:
+   ```env
+   VITE_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   The app will be running at `http://localhost:5173`.
+
+---
+*Built with ❤️ for the Document Formatter Problem Statement.*
