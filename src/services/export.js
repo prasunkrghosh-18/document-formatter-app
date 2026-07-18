@@ -5,29 +5,14 @@ export const exportToPDF = (elementId, filename) => {
   if (!element) return;
 
   const opt = {
-    margin:       [0, 0, 0, 0],
+    margin:       [0.5, 0.5, 0.5, 0.5],
     filename:     `${filename}.pdf`,
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2, useCORS: true },
     jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
   };
 
-  // We temporarily wrap it or ensure it's not constrained by scroll
-  const clone = element.cloneNode(true);
-  clone.style.height = 'auto';
-  clone.style.overflow = 'visible';
-  clone.style.boxShadow = 'none';
-  
-  const tempDiv = document.createElement('div');
-  tempDiv.appendChild(clone);
-  document.body.appendChild(tempDiv);
-  
-  tempDiv.style.position = 'absolute';
-  tempDiv.style.left = '-9999px';
-
-  html2pdf().set(opt).from(tempDiv).save().then(() => {
-    document.body.removeChild(tempDiv);
-  });
+  html2pdf().set(opt).from(element).save();
 };
 
 export const exportToDOCX = (elementId, filename) => {
